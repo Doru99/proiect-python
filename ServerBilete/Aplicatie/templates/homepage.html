@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Homepage
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/homepage.css' %}">
+{% endblock %}
+
+{% block content %}
+    <table>
+        {% for ticket in tickets %}
+        <tr>
+            <td rowspan="3">
+                <form action="reserve/" method="POST">
+                    {%csrf_token%}
+                    <input type="hidden" value="{{ticket.name}}" name="ticket" id="ticket">
+                    <input type="submit" value="Rezerva">
+                </form>
+            </td>
+            <td><span class="name">{{ticket.name}}</span></td>
+        </tr>
+        <tr>
+            <td><span class="date">{{ticket.date}}</span></td>
+        </tr>
+        <tr>
+            <td><span class="sponsor">Oferit de: {{ticket.sponsor.name}}</span></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

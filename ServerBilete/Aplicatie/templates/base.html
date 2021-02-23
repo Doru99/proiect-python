@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/base.css' %}">
+    {% block style %}
+    {% endblock %}
+</head>
+<body>
+    <div id="header">
+        <ul>
+            <li>
+                <a href="/homepage">Homepage</a>
+            </li>
+            {% if not logged %}
+            <li>
+                <a href="/login">Login</a>
+            </li>
+            <li>
+                <a href="/register">Register</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="/login">Logout</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    <div id="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/stefan.oprea.927" target="_blank"><img class="icon" src="../static/icon/facebook.png"> stefan.oprea.927</a>
+            </li>
+            <li>
+                <a href="https://github.com/Doru99" target="_blank"><img class="icon" src="../static/icon/github-logo.png"> Doru99</a>
+            </li>
+            <li><a href="#linkedIn" target="_blank"><img class="icon" src="../static/icon/linkedin-logo.png"> Stefan Oprea</a></li>
+            <li>
+                <span>February 2020</span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

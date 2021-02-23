@@ -1,0 +1,75 @@
+body{
+    --main-color:#248ECB;
+    --hover-color:#030e14;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+#header, #footer{
+    background-color:var(--main-color);
+}
+
+#header{
+    margin-bottom: 5%;
+}
+
+#header > ul, #footer > ul {
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
+    padding: 1% 1% 0 1%;
+}
+
+#header > ul > li {
+    float: right;
+    display: block;
+    padding: 10px;
+    margin: 0 0 0 2%;
+}
+
+#header > ul > li:first-child{
+    float: left;
+    margin: 0 2% 0 0;
+}
+
+#header > ul > li:hover{
+    background-color: var(--hover-color);
+    -webkit-box-shadow: 0px 5px 30px 0px #000000;
+    box-shadow: 0px 5px 30px 0px #000000;
+    transition: 0.5s all;
+}
+
+#header > ul > li > a, #header > ul > li > a:visited, #footer > ul > li > a, #footer > ul > li > a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+#header > ul > li > a, #header > ul > li > a:visited{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+#footer > ul {
+    margin: 2% 0 0 0;
+}
+
+#footer > ul > li:last-child{
+    margin: 2% 0 0 0;
+}
+
+.icon{
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0.4%;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: white;
+    border-radius: 50%;
+}

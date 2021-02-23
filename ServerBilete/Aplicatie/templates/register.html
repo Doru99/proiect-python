@@ -1,0 +1,18 @@
+{% extends 'login-template.html' %}
+{% block head %}
+    <title>Register</title>
+{% endblock %}
+{% block content %}
+    <h1>Register</h1>
+    <form method="POST" action="/login/">
+        {%csrf_token%}
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <br>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password">
+        <br>
+        <input type="submit" id="Send" value="Register">
+    </form>
+    <a href="/login">Already have an account? Login.</a>
+{% endblock %}

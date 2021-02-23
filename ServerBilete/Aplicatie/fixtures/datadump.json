@@ -1,0 +1,45 @@
+[
+  {
+    "model": "Aplicatie.Sponsor",
+    "pk": 1,
+    "fields": {
+      "name": "Museum of Senses",
+      "link": "#MusemOfSenses"
+    }
+  },
+  {
+    "model": "Aplicatie.Sponsor",
+    "pk": 2,
+    "fields": {
+      "name": "Club Blue",
+      "link": "#Blue"
+    }
+  },
+  {
+    "model": "Aplicatie.Ticket",
+    "pk": 1,
+    "fields": {
+      "name": "Intrare gratuita Museum of Senses",
+      "date": "2021-03-01 00:00:00",
+      "sponsor": 1
+    }
+  },
+  {
+    "model": "Aplicatie.Ticket",
+    "pk": 2,
+    "fields": {
+      "name": "Reducere 50% biliard",
+      "date": "2021-02-27 18:00:00",
+      "sponsor": 2
+    }
+  },
+  {
+    "model": "Aplicatie.Ticket",
+    "pk": 3,
+    "fields": {
+      "name": "Reducere 50% bowling",
+      "date": "2021-02-27 18:00:00",
+      "sponsor": 2
+    }
+  }
+]
